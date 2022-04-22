@@ -1,0 +1,88 @@
+Main As screen:
+
+    lblHeaderMain As label:
+        Align: =Align.Center
+        Fill: =LightGray
+        FontWeight: =FontWeight.Bold
+        Height: =72
+        Size: =21
+        Text: ="Microsoft Leave Request App"
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Label2 As label:
+        Align: =Center
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Welcome: " & gloUser.FullName & Char(10) & "your current holidays: " & LookUp(
+                'Éves Szabadságok 2022 Levelező_1',
+                Employee.Email = gloUser.Email
+            ).'Current leave' & " db"
+        Width: =560
+        X: =40
+        Y: =118
+        ZIndex: =2
+
+    lblFooterMain As label:
+        Align: =Align.Center
+        Fill: =LightGray
+        FontWeight: =Normal
+        Height: =72
+        Size: =18
+        Text: ="Copyright " & Year(Now()) & ". Microsoft | Minden jog fenntartva"
+        Width: =Parent.Width
+        Y: =1064
+        ZIndex: =3
+
+    imgWelcomeLogo As image:
+        Height: =320
+        Image: ='istockphoto-1145618475-612x612'
+        Width: =320
+        X: =160
+        Y: =232
+        ZIndex: =4
+
+    btnNewLeaveRequest As button:
+        Fill: =RGBA(158, 11, 15, 1)
+        Height: =70
+        OnSelect: =Navigate(NewLeaveRequest,ScreenTransition.Cover)
+        RadiusBottomLeft: =45
+        RadiusBottomRight: =45
+        RadiusTopLeft: =45
+        RadiusTopRight: =45
+        Size: =18
+        Text: ="New leave request"
+        Width: =280
+        X: =180
+        Y: =650
+        ZIndex: =5
+
+    btnMyNewLeaveList As button:
+        Fill: =RGBA(158, 11, 15, 1)
+        Height: =70
+        RadiusBottomLeft: =45
+        RadiusBottomRight: =45
+        RadiusTopLeft: =45
+        RadiusTopRight: =45
+        Size: =18
+        Text: ="My leave List"
+        Width: =280
+        X: =180
+        Y: =773
+        ZIndex: =6
+
+    btnAnnualHolidayAdministration As button:
+        Fill: =RGBA(158, 11, 15, 1)
+        Height: =70
+        RadiusBottomLeft: =45
+        RadiusBottomRight: =45
+        RadiusTopLeft: =45
+        RadiusTopRight: =45
+        Size: =18
+        Text: ="Annual holidays administration"
+        Width: =280
+        X: =180
+        Y: =887
+        ZIndex: =7
+

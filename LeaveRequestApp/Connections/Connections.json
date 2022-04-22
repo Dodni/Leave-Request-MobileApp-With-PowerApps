@@ -1,0 +1,35 @@
+{
+  "6db899e2-5a57-4b21-a037-55a4b265cce2": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/7cf9d0dc6e414c4a8421031363289aef",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1568/1.0.1568.2757/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://unineumannhu-my.sharepoint.com/personal/ecfe35_hallgato_uni-neumann_hu": {
+        "dataSources": {
+          "Éves Szabadságok 2022 Levelező_1": {
+            "tableName": "d7f3a9c4-a56f-414d-8f54-21ee47457931"
+          },
+          "LeaveRequest": {
+            "tableName": "252e88e1-fc43-4063-9a52-f0e88e71f143"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Éves Szabadságok 2022 Levelező_1",
+      "LeaveRequest"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6db899e2-5a57-4b21-a037-55a4b265cce2"
+  }
+}

@@ -1,0 +1,8 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =//Itt tudunk mindent beállítani ami kell a program futtatásához.
+        //Itt gloUser neven deklaraltuk globalis valtozot a felhasznalorol 
+        Set(gloUser,User())
+    StartScreen: =Main
+

@@ -1,0 +1,48 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-04-21T17:15:17.9230000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "File name with extension",
+      "{FullPath}": "Full Path",
+      "{HasAttachments}": "Has attachments",
+      "{Identifier}": "Identifier",
+      "{IsFolder}": "IsFolder",
+      "{Link}": "Link to item",
+      "{ModerationComment}": "Comments associated with the content approval of this list item",
+      "{ModerationStatus}": "Content approval status",
+      "{Name}": "Name",
+      "{Path}": "Folder path",
+      "{Thumbnail}": "Miniatűr",
+      "{TriggerWindowEndToken}": "Trigger Window End Token",
+      "{TriggerWindowStartToken}": "Trigger Window Start Token",
+      "{VersionNumber}": "Version number",
+      "Author": "Létrehozta",
+      "Author#Claims": "Létrehozta Claims",
+      "ComplianceAssetId": "Megfelelőségi eszköz azonosítója",
+      "Created": "Létrehozva",
+      "Description": "Description",
+      "Editor": "Módosította",
+      "Editor#Claims": "Módosította Claims",
+      "EndDate": "End Date",
+      "ID": "Azonosító",
+      "LeaveType": "Leave Type",
+      "LeaveType#Id": "Leave Type Id",
+      "Modified": "Módosítva",
+      "StartDate": "Start Date",
+      "Title": "Title"
+    },
+    "DatasetName": "https://unineumannhu-my.sharepoint.com/personal/ecfe35_hallgato_uni-neumann_hu",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "LeaveRequest",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
