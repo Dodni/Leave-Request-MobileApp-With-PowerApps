@@ -1,0 +1,35 @@
+{
+  "51300ec4-c0fb-492e-b2dc-3b26194fcffd": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/7cf9d0dc6e414c4a8421031363289aef",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1568/1.0.1568.2757/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://unineumannhu-my.sharepoint.com/personal/ecfe35_hallgato_uni-neumann_hu": {
+        "dataSources": {
+          "autok": {
+            "tableName": "9e7fcb82-a9f7-48e4-a25e-bc639ff3af6c"
+          },
+          "licitek": {
+            "tableName": "c7af2f82-d2fd-4ecb-a3e8-8d19c794e068"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "licitek",
+      "autok"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "51300ec4-c0fb-492e-b2dc-3b26194fcffd"
+  }
+}

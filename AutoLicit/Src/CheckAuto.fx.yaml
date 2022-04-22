@@ -1,0 +1,252 @@
+CheckAuto As screen:
+    ImagePosition: =ImagePosition.Center
+
+    lblHeaderMain_1 As label:
+        Align: =Align.Center
+        Fill: =LightGray
+        FontWeight: =FontWeight.Bold
+        Height: =72
+        Size: =21
+        Text: ="Autó Lista"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Icon1 As icon.Home:
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Main,ScreenTransition.UnCoverRight)
+        X: =576
+        Y: =4
+        ZIndex: =3
+
+    Icon2 As icon.BackArrow:
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Y: =4
+        ZIndex: =4
+
+    "glrAuto As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =994
+        Items: =autok
+        Layout: =Layout.Vertical
+        OnSelect: =
+        TemplatePadding: =0
+        TemplateSize: =233
+        Transition: =Transition.Pop
+        Y: =142
+        ZIndex: =5
+
+        Title1 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: |
+                =Parent.TemplateWidth
+            X: =150
+            Y: =44
+            ZIndex: =2
+
+        Subtitle1 As label:
+            DisplayMode: =DisplayMode.View
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Kivitel.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =3
+
+        Separator1 As rectangle:
+            DisplayMode: =DisplayMode.View
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Subtitle1_1 As label:
+            DisplayMode: =DisplayMode.View
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Állapot.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =112
+            ZIndex: =6
+
+        Subtitle1_2 As label:
+            DisplayMode: =DisplayMode.View
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Évjárat
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =144
+            ZIndex: =7
+
+        Subtitle1_3 As label:
+            DisplayMode: =DisplayMode.View
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Ajtók száma'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =172
+            ZIndex: =8
+
+        Subtitle1_4 As label:
+            DisplayMode: =DisplayMode.View
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Üzemanyag.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =204
+            ZIndex: =9
+
+        Button1 As button:
+            DisplayMode: |
+                =DisplayMode.Edit
+            Height: =70
+            OnSelect: =Set(gloLicit,ThisItem);Navigate(Bids)
+            Size: =18
+            Text: ="Licitek megtekintése"
+            Width: =218
+            X: =407
+            Y: =93
+            ZIndex: =10
+
+        Title1_1 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Márka"
+            VerticalAlign: =VerticalAlign.Top
+            Width: |
+                =150
+            Y: =44
+            ZIndex: =13
+
+        Title1_2 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Kivitel"
+            VerticalAlign: =VerticalAlign.Top
+            Y: =78
+            ZIndex: =14
+
+        Title1_3 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Üzemanyag"
+            VerticalAlign: =VerticalAlign.Top
+            Width: |
+                =150
+            Y: =204
+            ZIndex: =15
+
+        Title1_4 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Ajtó"
+            VerticalAlign: =VerticalAlign.Top
+            Y: =172
+            ZIndex: =16
+
+        Title1_5 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Évjárat"
+            VerticalAlign: =VerticalAlign.Top
+            Y: =142
+            ZIndex: =17
+
+        Title1_6 As label:
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Állapot"
+            VerticalAlign: =VerticalAlign.Top
+            Y: =110
+            ZIndex: =18
+
+    Label4 As label:
+        Height: =70
+        Size: =14
+        Text: ="Keresés ""Márka"" szerint"
+        Width: =Parent.Width
+        Y: =72
+        ZIndex: =6
+
