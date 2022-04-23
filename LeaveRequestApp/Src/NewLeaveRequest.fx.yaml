@@ -30,7 +30,8 @@ NewLeaveRequest As screen:
                 UpdateContext({locNewVacationCount:locCurrentLeave - locVacationDb});
                 Patch('Éves Szabadságok 2022 Levelező_1',LookUp('Éves Szabadságok 2022 Levelező_1',Employee.Email=gloUser.Email),
                 {'Current leave':locNewVacationCount})
-            )
+            );
+            SubmitForm(frmNewLeaverRequest)
         X: =561
         Y: =9
         ZIndex: =2
