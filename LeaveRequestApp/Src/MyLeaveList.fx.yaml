@@ -27,7 +27,7 @@ MyLeaveList As screen:
         Fill: =RGBA(0, 0, 0, 0)
         HeadingSize: =21
         Height: =Parent.Height
-        Items: =LeaveRequest
+        Items: =Filter(LeaveRequest,'Leave Type'.Value=Dropdown1.Selected.Value)
         Size: =21
         Width: =Parent.Width
         X: =0
