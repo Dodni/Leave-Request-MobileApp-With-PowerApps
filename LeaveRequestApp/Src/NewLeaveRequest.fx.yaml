@@ -28,7 +28,8 @@ NewLeaveRequest As screen:
                 //Itt határozom meg, hogy mennyi szabadságot kívánunk kivenni
                 UpdateContext({locVacationDb:DataCardValue7.SelectedDate - DataCardValue6.SelectedDate + 1});
                 UpdateContext({locNewVacationCount:locCurrentLeave - locVacationDb});
-                
+                Patch('Éves Szabadságok 2022 Levelező_1',LookUp('Éves Szabadságok 2022 Levelező_1',Employee.Email=gloUser.Email),
+                {'Current leave':locNewVacationCount})
             )
         X: =561
         Y: =9
