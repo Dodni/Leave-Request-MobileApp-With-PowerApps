@@ -78,7 +78,9 @@ MyLeaveList As screen:
 
     Dropdown1 As dropdown:
         Height: =77
-        Items: =["Vacation","Sick leave"]
+        Items: |-
+            =//Choices(LeaveRequest.'Leave Type')
+            ["Vacation","Sick leave"]
         Size: =21
         Width: =Parent.Width
         Y: =71
