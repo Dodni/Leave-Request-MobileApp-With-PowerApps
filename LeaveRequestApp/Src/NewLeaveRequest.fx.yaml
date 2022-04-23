@@ -26,7 +26,9 @@ NewLeaveRequest As screen:
                     }
                 );
                 //Itt határozom meg, hogy mennyi szabadságot kívánunk kivenni
-                UpdateContext({locVacationDb:DataCardValue7.SelectedDate - DataCardValue6.SelectedDate})
+                UpdateContext({locVacationDb:DataCardValue7.SelectedDate - DataCardValue6.SelectedDate + 1});
+                UpdateContext({locNewVacationCount:locCurrentLeave - locVacationDb});
+                
             )
         X: =561
         Y: =9

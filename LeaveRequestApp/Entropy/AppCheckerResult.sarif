@@ -254,47 +254,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewLeaveRequest.locCurrentLeave"
+                  "fullyQualifiedName": "NewLeaveRequest.locNewVacationCount"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewLeaveRequest.locCurrentLeave",
+                  "fullyQualifiedName": "NewLeaveRequest.locNewVacationCount",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "locCurrentLeave",
-                "module": "NewLeaveRequest",
-                "type": "NewLeaveRequest"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "NewLeaveRequest.locVacationDb"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "NewLeaveRequest.locVacationDb",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "locVacationDb",
+                "member": "locNewVacationCount",
                 "module": "NewLeaveRequest",
                 "type": "NewLeaveRequest"
               }
