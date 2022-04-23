@@ -15,7 +15,7 @@ NewLeaveRequest As screen:
         OnSelect: |-
             =//Form kliensoldali validáció
             If(
-                !IsBlank(locStartDateValid),
+                IsBlank(locStartDateValid),
                 Notify("Check the Start Date value"),
                 If(
                 //Mi a típusa a szabadságnak, amit ki szeretnénk venni
