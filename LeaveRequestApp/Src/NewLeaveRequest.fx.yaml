@@ -31,7 +31,7 @@ NewLeaveRequest As screen:
         Y: =71
         ZIndex: =4
 
-        "'Start Date_DataCard3' As typedDataCard.dateEditCard":
+        "'Start Date_DataCard1' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="StartDate"
             Default: =ThisItem.'Start Date'
@@ -39,14 +39,14 @@ NewLeaveRequest As screen:
             DisplayName: =DataSourceInfo([@LeaveRequest],DataSourceInfo.DisplayName,"StartDate")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
-            Update: =DataCardValue27.SelectedDate
+            Required: =true
+            Update: =DataCardValue6.SelectedDate
             Width: =640
             X: =0
             Y: =0
             ZIndex: =5
 
-            DataCardKey27 As label:
+            DataCardKey6 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -57,7 +57,7 @@ NewLeaveRequest As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue27 As datepicker:
+            DataCardValue6 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
@@ -71,10 +71,10 @@ NewLeaveRequest As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
 
-            ErrorMessage27 As label:
+            ErrorMessage6 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -87,21 +87,21 @@ NewLeaveRequest As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue27.Y + DataCardValue27.Height
+                Y: =DataCardValue6.Y + DataCardValue6.Height
                 ZIndex: =3
 
-            StarVisible27 As label:
+            StarVisible6 As label:
                 Align: =Align.Center
-                Height: =DataCardKey27.Height
+                Height: =DataCardKey6.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey27.Y
+                Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        "'End Date_DataCard3' As typedDataCard.dateEditCard":
+        "'End Date_DataCard1' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="EndDate"
             Default: =ThisItem.'End Date'
@@ -109,14 +109,14 @@ NewLeaveRequest As screen:
             DisplayName: =DataSourceInfo([@LeaveRequest],DataSourceInfo.DisplayName,"EndDate")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
-            Update: =DataCardValue28.SelectedDate
+            Required: =true
+            Update: =DataCardValue7.SelectedDate
             Width: =640
             X: =0
             Y: =1
             ZIndex: =5
 
-            DataCardKey28 As label:
+            DataCardKey7 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -127,7 +127,7 @@ NewLeaveRequest As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue28 As datepicker:
+            DataCardValue7 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
@@ -141,10 +141,10 @@ NewLeaveRequest As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
 
-            ErrorMessage28 As label:
+            ErrorMessage7 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -157,21 +157,21 @@ NewLeaveRequest As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue28.Y + DataCardValue28.Height
+                Y: =DataCardValue7.Y + DataCardValue7.Height
                 ZIndex: =3
 
-            StarVisible28 As label:
+            StarVisible7 As label:
                 Align: =Align.Center
-                Height: =DataCardKey28.Height
+                Height: =DataCardKey7.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey28.Y
+                Y: =DataCardKey7.Y
                 ZIndex: =4
 
-        "'Leave Type_DataCard3' As typedDataCard.comboBoxEditCard":
+        "'Leave Type_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="LeaveType"
             Default: =ThisItem.'Leave Type'
@@ -179,14 +179,14 @@ NewLeaveRequest As screen:
             DisplayName: =DataSourceInfo([@LeaveRequest],DataSourceInfo.DisplayName,"LeaveType")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
-            Update: =DataCardValue29.Selected
+            Required: =true
+            Update: =DataCardValue8.Selected
             Width: =640
             X: =0
             Y: =2
             ZIndex: =5
 
-            DataCardKey29 As label:
+            DataCardKey8 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -197,7 +197,7 @@ NewLeaveRequest As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue29 As combobox:
+            DataCardValue8 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -206,16 +206,16 @@ NewLeaveRequest As screen:
                 Items: =Choices([@LeaveRequest].LeaveType)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(LeaveRequest.LeaveType,DataCardValue29.SearchText)
+                SearchItems: =Choices(LeaveRequest.LeaveType,DataCardValue8.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
                 ZIndex: =2
 
-            ErrorMessage29 As label:
+            ErrorMessage8 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -228,18 +228,18 @@ NewLeaveRequest As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue29.Y + DataCardValue29.Height
+                Y: =DataCardValue8.Y + DataCardValue8.Height
                 ZIndex: =3
 
-            StarVisible29 As label:
+            StarVisible8 As label:
                 Align: =Align.Center
-                Height: =DataCardKey29.Height
+                Height: =DataCardKey8.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey29.Y
+                Y: =DataCardKey8.Y
                 ZIndex: =4
 
         Description_DataCard1 As typedDataCard.textualEditCard:
@@ -252,13 +252,13 @@ NewLeaveRequest As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@LeaveRequest], DataSourceInfo.MaxLength, "Description")
             Required: =false
-            Update: =DataCardValue30.Text
+            Update: =DataCardValue9.Text
             Width: =640
             X: =0
             Y: =3
             ZIndex: =5
 
-            DataCardKey30 As label:
+            DataCardKey9 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -269,7 +269,7 @@ NewLeaveRequest As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue30 As text:
+            DataCardValue9 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -285,10 +285,10 @@ NewLeaveRequest As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
                 ZIndex: =2
 
-            ErrorMessage30 As label:
+            ErrorMessage9 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -301,17 +301,17 @@ NewLeaveRequest As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue30.Y + DataCardValue30.Height
+                Y: =DataCardValue9.Y + DataCardValue9.Height
                 ZIndex: =3
 
-            StarVisible30 As label:
+            StarVisible9 As label:
                 Align: =Align.Center
-                Height: =DataCardKey30.Height
+                Height: =DataCardKey9.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey30.Y
+                Y: =DataCardKey9.Y
                 ZIndex: =4
 
