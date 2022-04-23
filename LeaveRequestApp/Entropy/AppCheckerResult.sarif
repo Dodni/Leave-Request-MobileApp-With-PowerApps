@@ -194,6 +194,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "NewLeaveRequest",
+                "type": "NewLeaveRequest.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "NewLeaveRequest.Icon1.AccessibleLabel"
                 }
               ],
@@ -224,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex"
+                  "fullyQualifiedName": "NewLeaveRequest.locCurrentLeave"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex",
+                  "fullyQualifiedName": "NewLeaveRequest.locCurrentLeave",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "locCurrentLeave",
                 "module": "NewLeaveRequest",
-                "type": "NewLeaveRequest.Icon1"
+                "type": "NewLeaveRequest"
               }
             }
           ],
@@ -246,8 +276,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
         }
       ],
       "tool": {
@@ -287,6 +317,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "People who use the keyboard with your app will not be able to access this element without a tab stop."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],

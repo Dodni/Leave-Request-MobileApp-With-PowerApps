@@ -12,7 +12,8 @@ NewLeaveRequest As screen:
 
     Icon1 As icon.Save:
         Icon: =Icon.Save
-        OnSelect: =SubmitForm(frmNewLeaverRequest);NewForm(frmNewLeaverRequest) 
+        OnSelect: |-
+            =If(DataCardValue8.Selected.Value="Vacation",UpdateContext({locCurrentLeave:LookUp('Éves Szabadságok 2022 Levelező_1',Employee.Email = gloUser.Email,'Current leave')}))
         X: =561
         Y: =4
         ZIndex: =2
@@ -28,6 +29,7 @@ NewLeaveRequest As screen:
         DataSource: =LeaveRequest
         DefaultMode: =FormMode.New
         Height: =1065
+        OnFailure: =Notify("Your leave request hasn't been sent the registration failed.")
         OnSuccess: =Notify("Your leave request has been successfully registered.",NotificationType.Success)
         Width: =Parent.Width
         Y: =71
@@ -85,7 +87,7 @@ NewLeaveRequest As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =24
-                Text: =Parent.Error
+                Text: =If(IsBlank(DataCardValue6.SelectedDate), "This field fill is required")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
