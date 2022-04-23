@@ -1,0 +1,86 @@
+MyLeaveList As screen:
+
+    cntHeaderMyLevelList As groupContainer.manualLayoutContainer:
+        Height: =71
+        Width: =Parent.Width
+        ZIndex: =3
+
+        lblHeaderMain_2 As label:
+            Align: =Align.Center
+            Fill: =LightGray
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Size: =21
+            Text: ="My leave requests"
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Icon2_1 As icon.Home:
+            Height: =Parent.Height
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Main)
+            ZIndex: =2
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        HeadingSize: =21
+        Height: =Parent.Height
+        Items: =LeaveRequest
+        Size: =21
+        Width: =Parent.Width
+        X: =0
+        Y: =148
+        ZIndex: =4
+
+        "'Start Date_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Start Date"
+            FieldName: ="StartDate"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.'Start Date'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        "'End Date_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="End Date"
+            FieldName: ="EndDate"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.'End Date'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        Description_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Description"
+            FieldName: ="Description"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Description
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+    Dropdown1 As dropdown:
+        Height: =77
+        Items: =["Vacation","Sick leave"]
+        Size: =21
+        Width: =Parent.Width
+        Y: =71
+        ZIndex: =5
+

@@ -99,6 +99,7 @@
   },
   "ScreenOrder": [
     "Main",
-    "NewLeaveRequest"
+    "NewLeaveRequest",
+    "MyLeaveList"
   ]
 }
