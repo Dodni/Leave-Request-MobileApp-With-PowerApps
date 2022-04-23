@@ -82,6 +82,7 @@ Main As screen:
         RadiusTopRight: =45
         Size: =18
         Text: ="Annual holidays administration"
+        Visible: =If(gloUser.Email="ECFE35@hallgato.uni-neumann.hu",true,false)
         Width: =280
         X: =180
         Y: =887
