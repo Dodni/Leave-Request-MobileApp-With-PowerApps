@@ -13,7 +13,10 @@ NewLeaveRequest As screen:
     Icon1 As icon.Save:
         Icon: =Icon.Save
         OnSelect: |-
-            =If(
+            =//Form kliensoldali validáció
+            If(!IsBlank(locStartDateValid),Notify("Check the Start Date value"));
+            
+            If(
                 //Mi a típusa a szabadságnak, amit ki szeretnénk venni
                 DataCardValue8.Selected.Value = "Vacation",
                 UpdateContext(
@@ -86,6 +89,8 @@ NewLeaveRequest As screen:
                 EndYear: =Year(Today())+100
                 Height: =70
                 IsEditable: =true
+                OnChange: |-
+                    =UpdateContext({locStartDateValid:Self.SelectedDate})
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =24
