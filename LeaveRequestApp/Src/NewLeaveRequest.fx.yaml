@@ -12,6 +12,7 @@ NewLeaveRequest As screen:
 
     Icon1 As icon.Save:
         Icon: =Icon.Save
+        OnSelect: =SubmitForm(frmNewLeaverRequest);NewForm(frmNewLeaverRequest) 
         X: =561
         Y: =4
         ZIndex: =2
@@ -27,6 +28,7 @@ NewLeaveRequest As screen:
         DataSource: =LeaveRequest
         DefaultMode: =FormMode.New
         Height: =1065
+        OnSuccess: =Notify("Your leave request has been successfully registered.",NotificationType.Success)
         Width: =Parent.Width
         Y: =71
         ZIndex: =4
