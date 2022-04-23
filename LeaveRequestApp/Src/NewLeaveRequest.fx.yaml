@@ -14,6 +14,7 @@ NewLeaveRequest As screen:
         Icon: =Icon.Save
         OnSelect: |-
             =If(
+                //Mi a típusa a szabadságnak, amit ki szeretnénk venni
                 DataCardValue8.Selected.Value = "Vacation",
                 UpdateContext(
                     {
@@ -24,10 +25,11 @@ NewLeaveRequest As screen:
                         )
                     }
                 );
+                //Itt határozom meg, hogy mennyi szabadságot kívánunk kivenni
                 UpdateContext({locVacationDb:DataCardValue7.SelectedDate - DataCardValue6.SelectedDate})
             )
         X: =561
-        Y: =4
+        Y: =9
         ZIndex: =2
 
     Icon2 As icon.Home:
