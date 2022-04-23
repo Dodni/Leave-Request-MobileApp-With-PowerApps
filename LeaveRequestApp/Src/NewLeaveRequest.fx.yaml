@@ -12,7 +12,7 @@ NewLeaveRequest As screen:
 
     Icon1 As icon.Save:
         Icon: =Icon.Save
-        OnSelect: |-
+        OnSelect: |
             =//Form kliensoldali validáció
             If(
                 IsBlank(locStartDateValid),
@@ -43,7 +43,6 @@ NewLeaveRequest As screen:
                 );
                 SubmitForm(frmNewLeaverRequest)
             );
-            NewForm(frmNewLeaverRequest);
         X: =561
         Y: =9
         ZIndex: =2
@@ -60,7 +59,7 @@ NewLeaveRequest As screen:
         DefaultMode: =FormMode.New
         Height: =1065
         OnFailure: =Notify("Your leave request hasn't been sent the registration failed.")
-        OnSuccess: =Notify("Your leave request has been successfully registered.",NotificationType.Success)
+        OnSuccess: =Notify("Your leave request has been successfully registered.",NotificationType.Success);NewForm(frmNewLeaverRequest);
         Width: =Parent.Width
         Y: =71
         ZIndex: =4
