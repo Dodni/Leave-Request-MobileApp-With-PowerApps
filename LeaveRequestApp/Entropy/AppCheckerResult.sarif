@@ -194,36 +194,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "NewLeaveRequest",
-                "type": "NewLeaveRequest.Icon1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "NewLeaveRequest.Icon1.AccessibleLabel"
                 }
               ],
@@ -254,6 +224,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NewLeaveRequest.Icon1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "NewLeaveRequest",
+                "type": "NewLeaveRequest.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "NewLeaveRequest.locCurrentLeave"
                 }
               ],
@@ -265,6 +265,36 @@
               },
               "properties": {
                 "member": "locCurrentLeave",
+                "module": "NewLeaveRequest",
+                "type": "NewLeaveRequest"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NewLeaveRequest.locVacationDb"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NewLeaveRequest.locVacationDb",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "locVacationDb",
                 "module": "NewLeaveRequest",
                 "type": "NewLeaveRequest"
               }

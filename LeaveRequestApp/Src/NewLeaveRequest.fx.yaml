@@ -13,7 +13,19 @@ NewLeaveRequest As screen:
     Icon1 As icon.Save:
         Icon: =Icon.Save
         OnSelect: |-
-            =If(DataCardValue8.Selected.Value="Vacation",UpdateContext({locCurrentLeave:LookUp('Éves Szabadságok 2022 Levelező_1',Employee.Email = gloUser.Email,'Current leave')}))
+            =If(
+                DataCardValue8.Selected.Value = "Vacation",
+                UpdateContext(
+                    {
+                        locCurrentLeave: LookUp(
+                            'Éves Szabadságok 2022 Levelező_1',
+                            Employee.Email = gloUser.Email,
+                            'Current leave'
+                        )
+                    }
+                );
+                UpdateContext({locVacationDb:DataCardValue7.SelectedDate - DataCardValue6.SelectedDate})
+            )
         X: =561
         Y: =4
         ZIndex: =2
