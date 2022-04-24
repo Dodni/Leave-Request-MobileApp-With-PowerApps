@@ -39,6 +39,7 @@ AnnualHolidaysAdministration As screen:
             )
         Layout: =Layout.Vertical
         TemplateSize: =77
+        Transition: =Transition.Pop
         Y: =219
         ZIndex: =2
 
@@ -123,8 +124,9 @@ AnnualHolidaysAdministration As screen:
 
     Form1 As form:
         DataSource: ='Éves Szabadságok 2022 Levelező_1'
+        Item: =Gallery1.Selected
         Width: =640
-        Y: =491
+        Y: =636
         ZIndex: =7
 
         Employee_DataCard1 As typedDataCard.comboBoxEditCard:
