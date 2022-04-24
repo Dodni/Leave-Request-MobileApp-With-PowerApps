@@ -25,7 +25,7 @@ NewLeaveRequest As screen:
                             locCurrentLeave: LookUp(
                                 'Éves Szabadságok 2022 Levelező_1',
                                 Employee.Email = gloUser.Email,
-                                'Current leave'
+                                Currentleave
                             )
                         }
                     );
@@ -38,7 +38,7 @@ NewLeaveRequest As screen:
                             'Éves Szabadságok 2022 Levelező_1',
                             Employee.Email = gloUser.Email
                         ),
-                        {'Current leave': locNewVacationCount}
+                        {Currentleave: locNewVacationCount}
                     )
                 );
                 SubmitForm(frmNewLeaverRequest)
@@ -238,10 +238,10 @@ NewLeaveRequest As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@LeaveRequest].LeaveType)
+                Items: =Choices([@LeaveRequest].'Leave Type')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(LeaveRequest.LeaveType,DataCardValue8.SearchText)
+                SearchItems: =Choices(LeaveRequest.'Leave Type',DataCardValue8.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

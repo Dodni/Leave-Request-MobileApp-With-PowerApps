@@ -24,6 +24,7 @@ AnnualHolidaysAdministration As screen:
         Icon3 As icon.Add:
             Height: =Parent.Height
             Icon: =Icon.Add
+            OnSelect: =NewForm(Form1)
             X: =576
             ZIndex: =3
 
@@ -73,7 +74,7 @@ AnnualHolidaysAdministration As screen:
 
         Icon4 As icon.ChevronRight:
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =EditForm(Form1)
             X: =566
             Y: =8
             ZIndex: =6
@@ -356,6 +357,6 @@ AnnualHolidaysAdministration As screen:
         Text: ="Save"
         Width: =280
         X: =180
-        Y: =1044
+        Y: =1021
         ZIndex: =8
 
