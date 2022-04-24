@@ -28,7 +28,7 @@ AnnualHolidaysAdministration As screen:
             ZIndex: =3
 
     Gallery1 As gallery.galleryVertical:
-        Height: =354
+        Height: =277
         Items: |-
             =Filter(
                 'Éves Szabadságok 2022 Levelező_1',
@@ -126,7 +126,7 @@ AnnualHolidaysAdministration As screen:
         DataSource: ='Éves Szabadságok 2022 Levelező_1'
         Item: =Gallery1.Selected
         Width: =640
-        Y: =636
+        Y: =521
         ZIndex: =7
 
         Employee_DataCard1 As typedDataCard.comboBoxEditCard:
@@ -344,4 +344,18 @@ AnnualHolidaysAdministration As screen:
                 Wrap: =false
                 Y: =DataCardKey4.Y
                 ZIndex: =4
+
+    Button1 As button:
+        Height: =70
+        OnSelect: =SubmitForm(Form1)
+        RadiusBottomLeft: =45
+        RadiusBottomRight: =45
+        RadiusTopLeft: =45
+        RadiusTopRight: =45
+        Size: =24
+        Text: ="Save"
+        Width: =280
+        X: =180
+        Y: =1044
+        ZIndex: =8
 
