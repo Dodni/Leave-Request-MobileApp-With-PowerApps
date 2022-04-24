@@ -1,0 +1,107 @@
+AnnualHolidaysAdministration As screen:
+
+    cntHeaderMyLevelList_1 As groupContainer.manualLayoutContainer:
+        Height: =64
+        Width: =Parent.Width
+        ZIndex: =1
+
+        lblHeaderMain_3 As label:
+            Align: =Align.Center
+            Fill: =LightGray
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Size: =21
+            Text: ="My leave requests"
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Icon2_2 As icon.Home:
+            Height: =Parent.Height
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Main)
+            ZIndex: =2
+
+        Icon3 As icon.Add:
+            Height: =Parent.Height
+            Icon: =Icon.Add
+            X: =576
+            ZIndex: =3
+
+    Gallery1 As gallery.galleryVertical:
+        Height: =354
+        Items: ='Éves Szabadságok 2022 Levelező_1'
+        Layout: =Layout.Vertical
+        TemplateSize: =146
+        Y: =219
+        ZIndex: =2
+
+        Label1 As label:
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Employee.DisplayName
+            Width: =307
+            ZIndex: =1
+
+        Label3_1 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Annual leave' & " db"
+            Width: =88
+            X: =307
+            ZIndex: =4
+
+        Label3_2 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Current leave' & " db"
+            Width: =88
+            X: =412
+            ZIndex: =5
+
+    Label5 As label:
+        Align: =Align.Center
+        Color: =RGBA(50, 86, 160, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Employee name"
+        Width: =286
+        Y: =149
+        ZIndex: =3
+
+    Label5_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(50, 86, 160, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Annual leave"
+        Width: =178
+        X: =268
+        Y: =149
+        ZIndex: =4
+
+    Label5_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(50, 86, 160, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Current leave"
+        Width: =178
+        X: =462
+        Y: =149
+        ZIndex: =5
+
+    TextInput1 As text:
+        Default: =""
+        Height: =70
+        HintText: ="Employee Search"
+        Size: =21
+        Width: =Parent.Width
+        Y: =64
+        ZIndex: =6
+

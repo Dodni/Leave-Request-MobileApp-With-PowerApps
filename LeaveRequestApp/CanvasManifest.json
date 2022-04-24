@@ -100,6 +100,7 @@
   "ScreenOrder": [
     "Main",
     "NewLeaveRequest",
-    "MyLeaveList"
+    "MyLeaveList",
+    "AnnualHolidaysAdministration"
   ]
 }
